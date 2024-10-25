@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendar Cita - Arte y Estilo</title>
-    <link rel="stylesheet" href="../ejemplo2/agenda.css"> 
+    <link rel="stylesheet" href="agenda.css">
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
-        emailjs.init('RbBc60quKDXPhyWb6'); 
+        emailjs.init('RbBc60quKDXPhyWb6');
     </script>
 </head>
 <body>
@@ -81,8 +81,8 @@
 
         btn.value = 'Enviando...';
 
-        const serviceID = 'default_service'; 
-        const templateID = 'template_24xohhf'; 
+        const serviceID = 'default_service';
+        const templateID = 'template_24xohhf';
 
         emailjs.sendForm(serviceID, templateID, this)
             .then(() => {
