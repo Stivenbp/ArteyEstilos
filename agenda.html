@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Cita - Arte y Estilo</title>
+    <link rel="stylesheet" href="../ejemplo2/css/agenda.css"> 
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('RbBc60quKDXPhyWb6'); 
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Arte y Estilo Barbería</h1>
+    <p>Tu estilo<br>nuestra pasión.</p>
+</header>
+
+<div class="container">
+    <h2>¡Agenda tu cita ahora!</h2>
+    <form id="reservar-form">
+        <label for="servicio">Selecciona tu Servicio:</label>
+        <select id="servicio" name="servicio" required>
+            <option value="corte">Cortes de cabello</option>
+            <option value="barba">Recorte de barba</option>
+            <option value="cejas">Limpieza de cejas</option>
+            <option value="hidratacion">Hidratación Profunda</option>
+            <option value="fortalecimiento">Fortalecimiento</option>
+            <option value="tratamientos">Tratamientos para Cabello Graso</option>
+            <option value="tratamiento-anticaspa">Tratamiento Anticaspa</option>
+            <option value="tratamientos-caida">Tratamientos para la Caída del Cabello</option>
+            <option value="exfoliacion">Exfoliación del Cuero Cabelludo</option>
+            <option value="brillo">Brillo y Suavidad</option>
+            <option value="coloracion">Coloración y Mechas</option>
+            <option value="tratamiento-antienvejecimiento">Tratamiento Antienvejecimiento</option>
+        </select>
+
+        <label for="barbero">Elige tu Barbero:</label>
+        <select id="barbero" name="barbero" required>
+            <option value="barbero1">Juan Pérez</option>
+            <option value="barbero2">Ana Gómez</option>
+            <option value="barbero3">Carlos Martínez</option>
+        </select>
+
+        <label for="fecha">Escoge la Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="hora">Escoge la Hora:</label>
+        <input type="time" id="hora" name="hora" required>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="comentarios">Comentarios (opcional):</label>
+        <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+        <button type="submit" id="button">¡Agendar Cita!</button>
+    </form>
+    <div id="mensaje-confirmacion" style="display:none;"></div>
+</div>
+
+<footer>
+    <p>© 2024 Barbería Arte y Estilo. Todos los derechos reservados.</p>
+    <p>Teléfono: [+57 3143040538] | Correo: [ArteyEstilosb@gmail.com]</p>
+    <p>Dirección: [calle 13 #16-54 valledupar (cesar)]</p>
+</footer>
+
+<script>
+    const btn = document.getElementById('button');
+
+    document.getElementById('reservar-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita el envío tradicional del formulario
+
+        btn.value = 'Enviando...';
+
+        const serviceID = 'default_service'; 
+        const templateID = 'template_24xohhf'; 
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                btn.value = '¡Agendado!';
+                const nombre = document.getElementById('nombre').value;
+                const fecha = document.getElementById('fecha').value;
+                const hora = document.getElementById('hora').value;
+                const mensaje = `Gracias ${nombre}, tu reserva ha sido confirmada para el ${fecha} a las ${hora}.`;
+                document.getElementById('mensaje-confirmacion').innerText = mensaje;
+                document.getElementById('mensaje-confirmacion').style.display = 'block';
+                this.reset();
+            }, (err) => {
+                btn.value = '¡Intenta de nuevo!';
+                alert(JSON.stringify(err));
+            });
+    });
+</script>
+
+</body>
+</html>
+
+
+
