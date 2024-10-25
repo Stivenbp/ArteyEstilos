@@ -233,13 +233,17 @@ h2 {
 }
 
 .products-1 h4 {
-    color: #1B1B1D;
+    color: blue;
     font-size: 20px;
     margin-bottom: 5px;
 }
+.products-1 h3 {
+    color: green;
+    font-size: 20px;
+    margin-bottom: 5px;
 
 .products-1 p {
-    color: #FF8400; 
+    color: black; 
     margin-bottom: 10px;
 }
 
