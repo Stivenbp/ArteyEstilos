@@ -343,6 +343,52 @@ footer {
     border-top: 1px solid #555;
     font-size: 14px;
 }
+.footer-barberia {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content-barberia {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links-barberia {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.footer-links-barberia li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.footer-links-barberia a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links-barberia a:hover {
+    text-decoration: underline;
+}
+
+.social-media-barberia {
+    margin-top: 10px;
+}
+
+.social-media-barberia a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-media-barberia a:hover {
+    text-decoration: underline;
+}
+
 
 @media (max-width: 768px) {
     .footer-section {
@@ -457,6 +503,34 @@ footer {
 
 .whatsapp-button:hover {
     background-color: #1ebe57; 
+}
+
+.instagram-button{
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134B8); /* Degradado de Instagram */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+
+}
+
+.facebook-button{
+
+    background: linear-gradient(45deg, #3b5998, #8b9dc3); /* Degradado de Facebook */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .footer-content ul li a:hover {

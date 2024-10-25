@@ -1,0 +1,61 @@
+.politicas-privacidad {
+    background-color: #f9f9f9; /* Color de fondo claro */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px auto; /* Margen externo centrado */
+    max-width: 800px; /* Ancho máximo */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.politicas-privacidad h2 {
+    color: #333; /* Color del título */
+    font-size: 24px; /* Tamaño de fuente del título */
+    margin-bottom: 15px; /* Espaciado debajo del título */
+}
+
+.politicas-privacidad h3 {
+    color: #555; /* Color de los subtítulos */
+    font-size: 20px; /* Tamaño de fuente del subtítulo */
+    margin-top: 20px; /* Espaciado superior */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.politicas-privacidad p {
+    color: #666; /* Color del texto */
+    line-height: 1.6; /* Altura de línea */
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+.politicas-privacidad ul {
+    margin-left: 20px; /* Margen a la izquierda para las listas */
+    color: #666; /* Color del texto de la lista */
+}
+
+.politicas-privacidad a {
+    color: #007bff; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.politicas-privacidad a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+.btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #b22222; /* Color rojo oscuro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #8b0000; /* Rojo más oscuro al pasar el ratón */
+}
